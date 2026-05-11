@@ -1,5 +1,5 @@
 
-# Hi, I'm Kushal Vaghela! 👋
+# Hi, I'm Ali Shykh! 👋
 
  I'm a passionate web developer with expertise in **MERN Stack** (MongoDB, Express.js, React.js, Node.js). I enjoy building scalable and user-friendly web applications that enhance productivity and efficiency.
 
@@ -8,7 +8,7 @@
 ### 🏢 Introduction
 The Office Management System is a comprehensive MERN stack-based web application designed to streamline office operations efficiently. This system enables managers and employees to manage tasks, projects, salaries, notifications, and reports while ensuring smooth communication and workflow.
 
-![Logo](https://res.cloudinary.com/da0lceyy7/image/upload/v1740898602/PrimeHubBlue_ugxjsp.jpg)
+![Logo](https://res.cloudinary.com/df0uz0xgd/image/upload/v1775305239/w9je8lpb6akqx3jjczrd.png)
 
 
 ### 🚀 Features Implemented
@@ -34,8 +34,6 @@ The Office Management System is a comprehensive MERN stack-based web application
 - **Group Projects** – Manage employee groups working on projects (add new groups, view details).
 
 - **Employee Requirements** – Approve or cancel requirements submitted by employees.
-
-- **Salary Page** – Process salary payments for employees (pay, delete).
 
 - **Profile Management** – Manage personal details, including photo and resume.
 
@@ -128,7 +126,7 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 ```
-    git clone https://github.com/Office_Management_System.git
+    git clone https://github.com/alishykh07/TechExp-OMS.git
 ```
 
 2. Navigate to the project directory:
@@ -165,10 +163,6 @@ Make sure you have the following installed:
     `FRONT_URL`
 
     `GEMINI_API_KEY`
-
-    `RAZORPAY_KEY_ID`
-
-    `RAZORPAY_KEY_SECRET`
 
     `CLOUDINARY_CLOUD_NAME`
 
@@ -215,17 +209,17 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## 📧 Contact
 
-For any queries or support, feel free to reach out at kushalvaghela2003@gmail.com
+For any queries or support, feel free to reach out at alishykh710@gmail.com
 ## Authors
 
-[@Kushal Vaghela](https://github.com/kushalvk)
+[@Ali Shykh](https://github.com/alishykh07)
 
 ## Deployed Website
 
 [See Website](https://office-ms-two.vercel.app/)
 
 ## 🔗 Links
-[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kushalvk)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kushal-vaghela-247b942a1/)
+[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alishykh07)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ali-shykh-589802340/)
 
 ## Thank you!
