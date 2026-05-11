@@ -1,0 +1,189 @@
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { allStaff, deleteStaff } from "../../Services/AuthService.js";
+import toast from "react-hot-toast";
+import DeleteConfirmationAlert from "../ConfirmetionAlerts/DeleteConfermetionAlert.jsx";
+import Back_Button from "../BackButton/Back_Button.jsx";
+import Loader from "../Loader/Loader.jsx";
+
+function All_Staff() {
+  const [staff, setStaff] = useState([]);
+  const [filteredStaff, setFilteredStaff] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedDept, setSelectedDept] = useState("all");
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [deleteId, setDeleteId] = useState(null);
+  const [closing, setClosing] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await allStaff();
+        setStaff(response.employees);
+        setFilteredStaff(response.employees);
+      } catch (e) {
+        console.log(e);
+        toast.error("Failed to fetch staff data");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    let result = staff;
+
+    if (searchTerm) {
+      result = result.filter((employee) =>
+        employee.fullName.toLowerCase().includes(searchTerm.toLowerCase()),
+      );
+    }
+
+    if (selectedDept !== "all") {
+      result = result.filter(
+        (employee) =>
+          employee.department.toLowerCase() === selectedDept.toLowerCase(),
+      );
+    }
+
+    setFilteredStaff(result);
+  }, [searchTerm, selectedDept, staff]);
+
+  const departments = ["all", ...new Set(staff.map((emp) => emp.department))];
+
+  const handleDeleteClick = (id) => {
+    setDeleteId(id);
+    setShowConfirm(true);
+    setClosing(false);
+  };
+
+  const handleDeleteConfirm = async () => {
+    try {
+      await deleteStaff(deleteId);
+      setStaff(staff.filter((employee) => employee._id !== deleteId));
+      setFilteredStaff(
+        filteredStaff.filter((employee) => employee._id !== deleteId),
+      );
+      toast.success("Staff member deleted successfully!");
+    } catch (e) {
+      console.log(e);
+      toast.error("Failed to delete staff member");
+    }
+  };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  return (
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(0,150,255,0.5)_0%,_#202251_70%)] p-10 pt-20">
+      <Back_Button />
+
+      <div className="max-w-3xl mx-auto text-center pt-16 pb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg animate-fade-in">
+          All Staff
+        </h1>
+      </div>
+
+      <div className="max-w-6xl mx-auto mb-8 flex flex-col sm:flex-row gap-4 justify-between items-center">
+        <input
+          type="text"
+          placeholder="Search by name..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-full sm:w-1/2 p-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:[#202251] text-gray-700 bg-white/90 backdrop-blur-sm"
+        />
+        <select
+          value={selectedDept}
+          onChange={(e) => setSelectedDept(e.target.value)}
+          className="w-full sm:w-1/4 p-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:[#202251] text-gray-700 bg-white/90 backdrop-blur-sm"
+        >
+          {departments.map((dept) => (
+            <option key={dept} value={dept} className="bg-white">
+              {dept === "all" ? "All Departments" : dept}
+            </option>
+          ))}
+        </select>
+        <button
+          onClick={() => navigate("/adduser")}
+          className="w-full sm:w-auto px-6 py-3 rounded-lg bg-[radial-gradient(circle_at_top,_rgba(0,150,255,0.5)_0%,_#202251_70%)] text-md font-bold text-white shadow-sm hover:bg-blue-500 transition-colors duration-300 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Add Staff
+        </button>
+      </div>
+
+      <div className="max-w-6xl mx-auto">
+        {filteredStaff.length === 0 ? (
+          <p className="text-center text-lg text-gray-200 font-semibold py-4 bg-white rounded-lg shadow-md">
+            No staff members found.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredStaff.map((employee, idx) => (
+              <div
+                key={idx}
+                className="bg-gradient-to-tr from-gray-200 via-gray-200 to-gray-500 p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                <img
+                  src={
+                    employee.profilePhoto
+                      ? `${employee.profilePhoto}`
+                      : "https://www.pngmart.com/files/23/Profile-PNG-Photo.png"
+                  }
+                  alt={employee.fullName}
+                  className="w-20 h-20 rounded-full mx-auto mb-4"
+                />
+                <h4 className="text-xl font-bold text-gray-800 text-center">
+                  {employee.fullName}
+                </h4>
+                <p className="text-sm text-gray-600 text-center">
+                  {employee.role}
+                </p>
+                <div className="mt-4 space-y-2">
+                  <p className="text-sm text-gray-700">
+                    <strong>Department:</strong> {employee.department}
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    <strong>Email:</strong> {employee.email}
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    <strong>Phone:</strong> {employee.mobNo}
+                  </p>
+                </div>
+                <div className="flex gap-4 mt-6">
+                  <button
+                    onClick={() => navigate(`/user-details/${employee._id}`)}
+                    className="flex-1 py-2 rounded-lg bg-[radial-gradient(circle_at_top,_rgba(139,191,77,0.5)_0%,_#4f7a2d_70%)] text-md font-bold text-white shadow-sm hover:bg-[#73a240] transition-colors duration-300 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#73a240]"
+                  >
+                    View
+                  </button>
+                  <button
+                    onClick={() => handleDeleteClick(employee._id)}
+                    className="flex-1 py-2 rounded-lg bg-[radial-gradient(circle_at_top,_rgba(0,150,255,0.5)_0%,_#202251_70%)] text-md font-bold text-white shadow-sm hover:bg-blue-500 transition-colors duration-300 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <DeleteConfirmationAlert
+        showConfirm={showConfirm}
+        setShowConfirm={setShowConfirm}
+        deleteId={deleteId}
+        setDeleteId={setDeleteId}
+        closing={closing}
+        setClosing={setClosing}
+        onConfirm={handleDeleteConfirm}
+      />
+    </div>
+  );
+}
+
+export default All_Staff;

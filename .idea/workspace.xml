@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="404eb4d8-f181-44b4-a139-a07b064bd629" name="Changes" comment="UPDATE: solving Error in search &amp; filter facility.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Kushal Vaghela &lt;142973474+kushalvk@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kushalvk&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kushalvk/Office_Managment_System.git&quot;,
+    &quot;accountId&quot;: &quot;afde608d-8f07-4a9d-b51b-7a126629525d&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2pZhLHkqAnUgiO353F5nTCow4I9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.Show_All_Task.jsx.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Office_Managment_System\Client\src\Components\ConfirmetionAlerts" />
+      <recent name="D:\Projects\Office_Managment_System\Storage" />
+      <recent name="D:\Projects\Office Managment System\Client\src\Components\Header" />
+      <recent name="D:\Projects\Office Managment System\Client\src\Components" />
+      <recent name="D:\Projects\Office Managment System\Client\src\Components\Home" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="404eb4d8-f181-44b4-a139-a07b064bd629" name="Changes" comment="" />
+      <created>1732979452319</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732979452319</updated>
+      <workItem from="1732979454717" duration="1648000" />
+      <workItem from="1733024911367" duration="9335000" />
+      <workItem from="1733036081496" duration="84000" />
+      <workItem from="1733036175035" duration="371000" />
+      <workItem from="1733036710029" duration="7821000" />
+      <workItem from="1733051596657" duration="618000" />
+      <workItem from="1733058689124" duration="210000" />
+      <workItem from="1733119228258" duration="85000" />
+      <workItem from="1733556713245" duration="21000" />
+      <workItem from="1733556762701" duration="998000" />
+      <workItem from="1733568735208" duration="3116000" />
+      <workItem from="1738211544078" duration="3450000" />
+      <workItem from="1738238298138" duration="8330000" />
+      <workItem from="1738324301462" duration="53000" />
+      <workItem from="1738384362804" duration="1537000" />
+      <workItem from="1738417199143" duration="103000" />
+      <workItem from="1738424343457" duration="12000" />
+      <workItem from="1738468096538" duration="32222000" />
+      <workItem from="1738551333606" duration="641000" />
+      <workItem from="1738553526279" duration="1878000" />
+      <workItem from="1738580914246" duration="1051000" />
+      <workItem from="1738640855500" duration="27402000" />
+      <workItem from="1738729139245" duration="634000" />
+      <workItem from="1738764726518" duration="4362000" />
+      <workItem from="1738814419139" duration="5052000" />
+      <workItem from="1738903033382" duration="18713000" />
+      <workItem from="1738936647463" duration="1738000" />
+      <workItem from="1738989671425" duration="77000" />
+      <workItem from="1739009834201" duration="12393000" />
+      <workItem from="1739618206829" duration="2099000" />
+      <workItem from="1739621654900" duration="683000" />
+      <workItem from="1739622438919" duration="8800000" />
+      <workItem from="1739678960537" duration="29351000" />
+      <workItem from="1739764634958" duration="1351000" />
+      <workItem from="1739815020608" duration="1985000" />
+      <workItem from="1739894676058" duration="2093000" />
+      <workItem from="1739937203865" duration="2183000" />
+      <workItem from="1739977930539" duration="1244000" />
+      <workItem from="1740023140078" duration="2002000" />
+      <workItem from="1740059982980" duration="13533000" />
+      <workItem from="1740146255872" duration="3245000" />
+      <workItem from="1740225019194" duration="18452000" />
+      <workItem from="1740286553455" duration="9542000" />
+      <workItem from="1740316398278" duration="12029000" />
+      <workItem from="1740402010624" duration="5062000" />
+      <workItem from="1740542759613" duration="983000" />
+      <workItem from="1740665664022" duration="8918000" />
+      <workItem from="1740717015386" duration="4961000" />
+      <workItem from="1740747883481" duration="22745000" />
+      <workItem from="1740803857445" duration="11437000" />
+      <workItem from="1740832240884" duration="3169000" />
+      <workItem from="1740892068348" duration="41000" />
+      <workItem from="1740893871860" duration="315000" />
+      <workItem from="1740900857489" duration="511000" />
+      <workItem from="1741006226234" duration="857000" />
+      <workItem from="1741009306976" duration="3768000" />
+      <workItem from="1741022491473" duration="37000" />
+      <workItem from="1741184880249" duration="3864000" />
+      <workItem from="1741193698855" duration="4171000" />
+      <workItem from="1741698801814" duration="2704000" />
+      <workItem from="1741703151661" duration="1014000" />
+      <workItem from="1741704496030" duration="597000" />
+      <workItem from="1741837696088" duration="1060000" />
+      <workItem from="1742298084301" duration="5365000" />
+      <workItem from="1742316227522" duration="295000" />
+      <workItem from="1742352777287" duration="2568000" />
+      <workItem from="1742362690417" duration="2444000" />
+      <workItem from="1742369429485" duration="616000" />
+      <workItem from="1742391813681" duration="4605000" />
+      <workItem from="1743510716559" duration="21000" />
+      <workItem from="1743510783196" duration="16829000" />
+      <workItem from="1743569818384" duration="690000" />
+      <workItem from="1743575254935" duration="797000" />
+      <workItem from="1743576349913" duration="293000" />
+      <workItem from="1743596644786" duration="6366000" />
+      <workItem from="1743605166322" duration="181000" />
+      <workItem from="1743605680258" duration="674000" />
+      <workItem from="1743606401472" duration="7000" />
+      <workItem from="1743661366450" duration="1221000" />
+      <workItem from="1743770146352" duration="881000" />
+      <workItem from="1743825082071" duration="3381000" />
+      <workItem from="1743860405927" duration="1223000" />
+      <workItem from="1743921863687" duration="1409000" />
+      <workItem from="1743985056177" duration="1643000" />
+      <workItem from="1743992938879" duration="4422000" />
+      <workItem from="1749997281913" duration="4012000" />
+    </task>
+    <task id="LOCAL-00037" summary="UPDATE: file Load Permition.">
+      <option name="closed" value="true" />
+      <created>1740326837323</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1740326837323</updated>
+    </task>
+    <task id="LOCAL-00038" summary="UPDATE: file Load Permition.">
+      <option name="closed" value="true" />
+      <created>1740327105445</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1740327105445</updated>
+    </task>
+    <task id="LOCAL-00039" summary="UPDATE: file Load Permition.">
+      <option name="closed" value="true" />
+      <created>1740328825921</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1740328825921</updated>
+    </task>
+    <task id="LOCAL-00040" summary="UPDATE: file Load Permition.">
+      <option name="closed" value="true" />
+      <created>1740329317627</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1740329317627</updated>
+    </task>
+    <task id="LOCAL-00041" summary="UPDATE: Website Icon.">
+      <option name="closed" value="true" />
+      <created>1740329723571</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1740329723571</updated>
+    </task>
+    <task id="LOCAL-00042" summary="UPDATE: Limit File size.">
+      <option name="closed" value="true" />
+      <created>1740331233928</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1740331233928</updated>
+    </task>
+    <task id="LOCAL-00043" summary="UPDATE: file upload setup.">
+      <option name="closed" value="true" />
+      <created>1740332679522</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1740332679522</updated>
+    </task>
+    <task id="LOCAL-00044" summary="UPDATE: file upload error.">
+      <option name="closed" value="true" />
+      <created>1740402732563</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1740402732563</updated>
+    </task>
+    <task id="LOCAL-00045" summary="ADD: Apply a Cloudinary.">
+      <option name="closed" value="true" />
+      <created>1740717428351</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1740717428351</updated>
+    </task>
+    <task id="LOCAL-00046" summary="ADD: Apply a Cloudinary.">
+      <option name="closed" value="true" />
+      <created>1740719429957</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1740719429958</updated>
+    </task>
+    <task id="LOCAL-00047" summary="ADD: handle error to large file size at report.">
+      <option name="closed" value="true" />
+      <created>1740720929434</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1740720929434</updated>
+    </task>
+    <task id="LOCAL-00048" summary="ADD: handle error to large file size at report.">
+      <option name="closed" value="true" />
+      <created>1740721513112</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1740721513112</updated>
+    </task>
+    <task id="LOCAL-00049" summary="ADD: handle error to large file size at report.">
+      <option name="closed" value="true" />
+      <created>1740721825144</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1740721825144</updated>
+    </task>
+    <task id="LOCAL-00050" summary="ADD: Files Upload on cloudinary completed for all page.">
+      <option name="closed" value="true" />
+      <created>1740753513228</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1740753513228</updated>
+    </task>
+    <task id="LOCAL-00051" summary="UPDATE: on document click Redirection.">
+      <option name="closed" value="true" />
+      <created>1740753856692</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1740753856692</updated>
+    </task>
+    <task id="LOCAL-00052" summary="UPDATE: on document click Redirection.">
+      <option name="closed" value="true" />
+      <created>1740754178056</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1740754178056</updated>
+    </task>
+    <task id="LOCAL-00053" summary="UPDATE: on document click Redirection.">
+      <option name="closed" value="true" />
+      <created>1740754497872</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1740754497872</updated>
+    </task>
+    <task id="LOCAL-00054" summary="UPDATE: All Notification using library react-hot-toast.">
+      <option name="closed" value="true" />
+      <created>1740760304504</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1740760304505</updated>
+    </task>
+    <task id="LOCAL-00055" summary="UPDATE: All Page Back Button.">
+      <option name="closed" value="true" />
+      <created>1740762515696</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1740762515696</updated>
+    </task>
+    <task id="LOCAL-00056" summary="UPDATE: Improve UI">
+      <option name="closed" value="true" />
+      <created>1740773142500</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1740773142501</updated>
+    </task>
+    <task id="LOCAL-00057" summary="UPDATE: Improve UI">
+      <option name="closed" value="true" />
+      <created>1740773327129</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1740773327129</updated>
+    </task>
+    <task id="LOCAL-00058" summary="ADD: Customization Alert.">
+      <option name="closed" value="true" />
+      <created>1740816506765</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1740816506765</updated>
+    </task>
+    <task id="LOCAL-00059" summary="UPDATE: Final Commit.">
+      <option name="closed" value="true" />
+      <created>1740836937197</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1740836937198</updated>
+    </task>
+    <task id="LOCAL-00060" summary="UPDATE: Final Commit.">
+      <option name="closed" value="true" />
+      <created>1740901325241</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1740901325242</updated>
+    </task>
+    <task id="LOCAL-00061" summary="UPDATE: Final Commit.">
+      <option name="closed" value="true" />
+      <created>1741022271754</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1741022271754</updated>
+    </task>
+    <task id="LOCAL-00062" summary="UPDATE: Send Email to register User with login credentials.">
+      <option name="closed" value="true" />
+      <created>1741196771154</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1741196771155</updated>
+    </task>
+    <task id="LOCAL-00063" summary="UPDATE: Send Email to register User with login credentials.">
+      <option name="closed" value="true" />
+      <created>1741197654266</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1741197654266</updated>
+    </task>
+    <task id="LOCAL-00064" summary="UPDATE: Email Validation Email is Exist or not.">
+      <option name="closed" value="true" />
+      <created>1741702460332</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1741702460333</updated>
+    </task>
+    <task id="LOCAL-00065" summary="UPDATE: Email Validation Email is Exist or not.">
+      <option name="closed" value="true" />
+      <created>1741703275586</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703275587</updated>
+    </task>
+    <task id="LOCAL-00066" summary="UPDATE: Email Validation Email is Exist or not.">
+      <option name="closed" value="true" />
+      <created>1741703666393</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1741703666394</updated>
+    </task>
+    <task id="LOCAL-00067" summary="UPDATE: Solving Grammatical Error.">
+      <option name="closed" value="true" />
+      <created>1741704881344</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1741704881344</updated>
+    </task>
+    <task id="LOCAL-00068" summary="UPDATE: Sidebar CSS">
+      <option name="closed" value="true" />
+      <created>1741838132150</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1741838132150</updated>
+    </task>
+    <task id="LOCAL-00069" summary="UPDATE: SMTP Validation">
+      <option name="closed" value="true" />
+      <created>1742303461689</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1742303461690</updated>
+    </task>
+    <task id="LOCAL-00070" summary="UPDATE: Customize alert.">
+      <option name="closed" value="true" />
+      <created>1742316488772</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1742316488772</updated>
+    </task>
+    <task id="LOCAL-00071" summary="UPDATE: Toaster on Add Staff Page.">
+      <option name="closed" value="true" />
+      <created>1742392736164</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1742392736164</updated>
+    </task>
+    <task id="LOCAL-00072" summary="UPDATE: Add User page Password validation and other.">
+      <option name="closed" value="true" />
+      <created>1742395782389</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1742395782389</updated>
+    </task>
+    <task id="LOCAL-00073" summary="UPDATE: Dynamic Attendance &amp; Salary based on attendance(auto calculate)">
+      <option name="closed" value="true" />
+      <created>1743532430935</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1743532430935</updated>
+    </task>
+    <task id="LOCAL-00074" summary="UPDATE: Dynamic Attendance &amp; Salary based on attendance(auto calculate)">
+      <option name="closed" value="true" />
+      <created>1743532537944</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1743532537944</updated>
+    </task>
+    <task id="LOCAL-00075" summary="UPDATE: Remove Unnecessary data.">
+      <option name="closed" value="true" />
+      <created>1743575984071</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1743575984071</updated>
+    </task>
+    <task id="LOCAL-00076" summary="UPDATE: Change CSS.">
+      <option name="closed" value="true" />
+      <created>1743576611789</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1743576611789</updated>
+    </task>
+    <task id="LOCAL-00077" summary="ADD: Attendance Details on Admin side">
+      <option name="closed" value="true" />
+      <created>1743604760129</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1743604760130</updated>
+    </task>
+    <task id="LOCAL-00078" summary="UPDATE: Handle Timezone at attendance IST.">
+      <option name="closed" value="true" />
+      <created>1743828154230</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1743828154231</updated>
+    </task>
+    <task id="LOCAL-00079" summary="UPDATE: Handle Timezone at attendance IST.">
+      <option name="closed" value="true" />
+      <created>1743828586413</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1743828586413</updated>
+    </task>
+    <task id="LOCAL-00080" summary="UPDATE: Solving Error at Profile Page.">
+      <option name="closed" value="true" />
+      <created>1743923143423</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1743923143423</updated>
+    </task>
+    <task id="LOCAL-00081" summary="UPDATE: Update add Work Page.">
+      <option name="closed" value="true" />
+      <created>1743995724422</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1743995724422</updated>
+    </task>
+    <task id="LOCAL-00082" summary="UPDATE: Update add Work Page.">
+      <option name="closed" value="true" />
+      <created>1743995954064</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1743995954064</updated>
+    </task>
+    <task id="LOCAL-00083" summary="UPDATE: solving Error in search &amp; filter facility.">
+      <option name="closed" value="true" />
+      <created>1750001422455</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1750001422455</updated>
+    </task>
+    <task id="LOCAL-00084" summary="UPDATE: solving Error in search &amp; filter facility.">
+      <option name="closed" value="true" />
+      <created>1750001782007</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1750001782007</updated>
+    </task>
+    <task id="LOCAL-00085" summary="UPDATE: solving Error in search &amp; filter facility.">
+      <option name="closed" value="true" />
+      <created>1750002008476</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1750002008476</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ADD: Apply a Cloudinary." />
+    <MESSAGE value="ADD: handle error to large file size at report." />
+    <MESSAGE value="ADD: Files Upload on cloudinary completed for all page." />
+    <MESSAGE value="UPDATE: on document click Redirection." />
+    <MESSAGE value="UPDATE: All Notification using library react-hot-toast." />
+    <MESSAGE value="UPDATE: All Page Back Button." />
+    <MESSAGE value="UPDATE: Improve UI" />
+    <MESSAGE value="ADD: Customization Alert." />
+    <MESSAGE value="UPDATE: Final Commit." />
+    <MESSAGE value="UPDATE: Send Email to register User with login credentials." />
+    <MESSAGE value="UPDATE: Email Validation Email is Exist or not." />
+    <MESSAGE value="UPDATE: Solving Grammatical Error." />
+    <MESSAGE value="UPDATE: Sidebar CSS" />
+    <MESSAGE value="UPDATE: SMTP Validation" />
+    <MESSAGE value="UPDATE: Customize alert." />
+    <MESSAGE value="UPDATE: Toaster on Add Staff Page." />
+    <MESSAGE value="UPDATE: Add User page Password validation and other." />
+    <MESSAGE value="UPDATE: Dynamic Attendance &amp; Salary based on attendance(auto calculate)" />
+    <MESSAGE value="UPDATE: Remove Unnecessary data." />
+    <MESSAGE value="UPDATE: Change CSS." />
+    <MESSAGE value="ADD: Attendance Details on Admin side" />
+    <MESSAGE value="UPDATE: Handle Timezone at attendance IST." />
+    <MESSAGE value="UPDATE: Solving Error at Profile Page." />
+    <MESSAGE value="UPDATE: Update add Work Page." />
+    <MESSAGE value="UPDATE: solving Error in search &amp; filter facility." />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: solving Error in search &amp; filter facility." />
+  </component>
+</project>
