@@ -8,7 +8,7 @@
 ### 🏢 Introduction
 The Office Management System is a comprehensive MERN stack-based web application designed to streamline office operations efficiently. This system enables managers and employees to manage tasks, projects, salaries, notifications, and reports while ensuring smooth communication and workflow.
 
-![Logo](https://res.cloudinary.com/df0uz0xgd/image/upload/v1775305239/w9je8lpb6akqx3jjczrd.png)
+![Logo](https://res.cloudinary.com/df0uz0xgd/image/upload/v1778525368/ilk6y366g2qlra3epkes.jpg)
 
 
 ### 🚀 Features Implemented
