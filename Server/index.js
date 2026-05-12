@@ -63,6 +63,6 @@ app.get("/", (req, res) => {
     res.json(" Hello from TechExp Server ! ")
 })
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("TechExp Server is runing on port number : 3001");
 })

@@ -1,5 +1,5 @@
 
-# Hi, I'm Ali Raza Shykh! 👋
+# Hi, I'm Ali Shykh! 👋
 
  I'm a passionate web developer with expertise in **MERN Stack** (MongoDB, Express.js, React.js, Node.js). I enjoy building scalable and user-friendly web applications that enhance productivity and efficiency.
 
