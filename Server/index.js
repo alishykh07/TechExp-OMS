@@ -30,7 +30,7 @@ app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: false }));
 
-if (mongoose.connect(process.env.MONGODB_URL)) {
+if (mongoose.connect(process.env.MONGO_URL)) {
     console.log("TechExp Database connected");
 } else {
     console.log("Database not connected");
