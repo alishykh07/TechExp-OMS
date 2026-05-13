@@ -78,13 +78,13 @@ function Add_User() {
       const age = today.getFullYear() - selectedDate.getFullYear();
 
       if (
-        age < 18 ||
-        (age === 18 &&
+        age < 16 ||
+        (age === 16 &&
           today <
             new Date(selectedDate.setFullYear(selectedDate.getFullYear() + 18)))
       ) {
-        setError("User must be at least 18 years old.");
-        toast.error("User must be at least 18 years old.");
+        setError("User must be at least 16 years old.");
+        toast.error("User must be at least 16 years old.");
         return;
       } else {
         setError("");
