@@ -18,13 +18,30 @@ const path = require("path");
 
 const app = express();
 const corsOptions = {
-    origin: [process.env.FRONT_URL],
+    origin: [
+        "http://localhost:5173",
+        "https://tech-exp-oms.vercel.app"
+    ],
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Auth-Token', 'Origin'],
     optionsSuccessStatus: 200
 };
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors({
+    origin: function (origin, callback) {
+        if (
+            !origin ||
+            origin === "http://localhost:5173" ||
+            origin === "https://tech-exp-oms.vercel.app"
+        ) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    credentials: true
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 app.use(express.json({ limit: "20mb" }));
