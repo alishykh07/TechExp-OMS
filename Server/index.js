@@ -28,20 +28,32 @@ const corsOptions = {
     optionsSuccessStatus: 200
 };
 // app.use(cors(corsOptions));
+const cors = require("cors");
+
 app.use(cors({
-    origin: function (origin, callback) {
-        if (
-            !origin ||
-            origin === "http://localhost:5173" ||
-            origin === "https://tech-exp-oms.vercel.app"
-        ) {
-            callback(null, true);
-        } else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    },
-    credentials: true
+    origin: [
+        "http://localhost:5173",
+        "https://tech-exp-oms.vercel.app"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
+// IMPORTANT: handle preflight
+app.options("*", cors());
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", req.headers.origin);
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+
+    if (req.method === "OPTIONS") {
+        return res.sendStatus(200);
+    }
+
+    next();
+});
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 app.use(express.json({ limit: "20mb" }));
