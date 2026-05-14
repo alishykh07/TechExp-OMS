@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 const verifyToken = (req, res, next) => {
 
@@ -27,6 +27,7 @@ const verifyToken = (req, res, next) => {
         }
 
         req.user = decoded;
+
         next();
     });
 };
