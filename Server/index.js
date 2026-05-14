@@ -17,46 +17,21 @@ require("dotenv").config();
 const path = require("path");
 
 const app = express();
-const corsOptions = {
+app.use(cors({
     origin: [
         "http://localhost:5173",
         "https://tech-exp-oms.vercel.app"
     ],
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Auth-Token', 'Origin'],
-    optionsSuccessStatus: 200
-};
-// app.use(cors(corsOptions));
-const cors = require("cors");
-
-const allowedOrigins = [
-    "http://localhost:5173",
-    "https://tech-exp-oms.vercel.app"
-];
-
-app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(null, true); // TEMP: allow all to debug
-        }
-    },
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Auth-Token", "Origin"]
 }));
 
 app.options("*", cors());
-app.use((req, res, next) => {
-    console.log("REQUEST:", req.method, req.url);
-    next();
-});
-app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, "uploads")));
+
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: false }));
+app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 
 mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log("DB connected"))
