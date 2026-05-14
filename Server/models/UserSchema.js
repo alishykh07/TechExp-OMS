@@ -61,7 +61,7 @@ const UserSchema = new mongoose.Schema({
 
     role: {
         type: String,
-        enum: ['admin', 'Manager', 'Employee'],
+        enum: ['Manager', 'Employee'],
         default: 'Employee'
     },
 
@@ -76,22 +76,17 @@ const UserSchema = new mongoose.Schema({
     },
 },{timestamps:true})
 
-UserSchema.methods.generateAuthToken = async function () {
-    try {
-        const token = jwt.sign({
+UserSchema.methods.generateAuthToken = function () {
+    return jwt.sign(
+        {
             username: this.username,
             email: this.email,
             role: this.role,
         },
-            process.env.JWT_SECRET,
-            {
-                expiresIn: '7d',
-            });
-        return token;
-    } catch (error) {
-        console.log(error)
-    }
-}
+        process.env.JWT_SECRET,
+        { expiresIn: "7d" }
+    );
+};
 
 const UserModel = mongoose.model("users", UserSchema)
 module.exports = UserModel

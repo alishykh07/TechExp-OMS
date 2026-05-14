@@ -28,13 +28,13 @@ exports.registerEmailHtml = (fullname, username, password) => {
 
                     <h2 style="font-size: 20px; color: #007bff; margin: 20px 0 10px;">Get Started</h2>
                     <ul style="padding-left: 20px; font-size: 15px;">
-                        <li>Log in at <a href="" style="color: #007bff; text-decoration: none; font-weight: bold;"></a></li>
+                        <li>Log in at <a href="https://tech-exp-oms.vercel.app/login" style="color: #007bff; text-decoration: none; font-weight: bold;"></a></li>
                         <li>Explore your dashboard</li>
-                        <li>Need help? Email <a href="zaidq911@gmail.com" style="color: #007bff; text-decoration: none; font-weight: bold;">zaidq911@gmail.com</a> or visit our <a href="https://office-ms-two.vercel.app/contactus" style="color: #007bff; text-decoration: none; font-weight: bold;">Help Center</a></li>
+                        <li>Need help? Email <a href="mailto:zaidq911@gmail.com" style="color: #007bff; text-decoration: none; font-weight: bold;">zaidq911@gmail.com</a> or visit our <a href="https://office-ms-two.vercel.app/contactus" style="color: #007bff; text-decoration: none; font-weight: bold;">Help Center</a></li>
                     </ul>
 
                     <div style="text-align: center; margin: 30px 0;">
-                        <a href="" style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold;">Log In Now</a>
+                        <a href="https://tech-exp-oms.vercel.app/login" style="display: inline-block; padding: 12px 24px; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: bold;">Log In Now</a>
                     </div>
 
                     <p style="font-size: 16px;">We’re here to help you succeed. Reply to this email with any questions!</p>
@@ -44,7 +44,7 @@ exports.registerEmailHtml = (fullname, username, password) => {
 
                 <!-- Footer -->
                 <div style="background-color: #f1f4f8; padding: 20px; text-align: center; font-size: 13px; color: #666666;">
-                    <p>TechExp | <a href="" style="color: #007bff; text-decoration: none;">Visit Our Website</a></p>
+                    <p>TechExp | <a href="https://tech-exp-oms.vercel.app" style="color: #007bff; text-decoration: none;">Visit Our Website</a></p>
                 </div>
             </div>
         </body>
