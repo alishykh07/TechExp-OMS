@@ -29,6 +29,11 @@ app.use(cors({
 
 app.options("*", cors());
 
+mongoose.connect(process.env.MONGO_URL, {
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+})
+
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: false }));
 app.use('/uploads', express.static(path.join(__dirname, "uploads")));
