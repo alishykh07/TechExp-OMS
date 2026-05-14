@@ -48,8 +48,12 @@ app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: false }));
 
 mongoose.connect(process.env.MONGO_URL)
-.then(() => console.log("TechExp Database connected"))
-.catch((err) => console.log("DB connection error:", err));
+.then(() => {
+    console.log("TechExp Database connected");
+})
+.catch((err) => {
+    console.log("DB connection error:", err);
+});
 
 app.use(authRouters);
 
