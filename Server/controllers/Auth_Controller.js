@@ -33,19 +33,18 @@ const addUserController = async (req, res) => {
         const hashpass = await bcrypt.hash(password, 12);
 
         let profilePhoto = null;
-        let resume = null;
+        let resume = null;  // ✅ yahan declare ho gaya
 
         if (req.files?.profilePhoto?.[0]) {
             const file = req.files.profilePhoto[0];
             profilePhoto = await uploadOnCloudinary(file.buffer);
         }
 
+        if (!req.files?.resume?.[0]) {
+            return res.status(400).json({ message: "Resume required" });
+        }
 
-if (!req.files?.resume?.[0]) {
-    return res.status(400).json({ message: "Resume required" });
-}
-
-resume = await uploadOnCloudinary(req.files.resume[0].buffer);
+        resume = await uploadOnCloudinary(req.files.resume[0].buffer); // ✅ const hata diya
 
         const newUser = await UserModel.create({
             fullName,
@@ -71,7 +70,6 @@ resume = await uploadOnCloudinary(req.files.resume[0].buffer);
         );
 
         res.status(201).json({message: "User added successfully", user: newUser});
-        
 
     } catch (error) {
         console.error("Error in user registration:", error);
@@ -104,9 +102,7 @@ const loginController = async (req, res) => {
         res.status(200).send({message: "User Login sucessfully", token, user})
 
     } catch (error) {
-
         console.log("LOGIN ERROR => ", error);
-
         res.status(500).send({
             message: "Error to Login User : Controller",
             error: error.message
