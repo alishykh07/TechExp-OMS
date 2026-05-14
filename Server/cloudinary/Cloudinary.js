@@ -23,7 +23,7 @@ const uploadOnCloudinary = async (fileBuffer) => {
           console.log("Cloudinary Upload Error:", error);
           return reject(error);
         }
-        console.log("File uploaded successfully:", result.url);
+        console.log("File uploaded successfully:", result.secure_url);
         resolve(result);
       },
     );
