@@ -12,12 +12,22 @@ export const addUser = async (form) => {
 
 export const login = async (form) => {
     try {
-        const response = await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/login`, form)
+        const response = await axios.post(
+            `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/login`,
+            form
+        );
+
         return response.data;
+
     } catch (err) {
-        error(err)
+
+        console.log(err.response?.data || err.message);
+
+        throw new Error(
+            err.response?.data?.message || "Login Failed"
+        );
     }
-}
+};
 
 export const forgotPassword = async (form) => {
     try {
@@ -29,15 +39,33 @@ export const forgotPassword = async (form) => {
 }
 
 export const loggedUser = async () => {
+
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        return null;
+    }
+
     try {
-        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/loggeduser`, {
-            headers: {
-                Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-        })
+
+        const response = await axios.get(
+            `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/loggeduser`,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            }
+        );
+
         return response.data.user;
+
     } catch (err) {
-        error(err)
+
+        console.log(err.response?.data || err.message);
+
+        localStorage.removeItem("token");
+
+        return null;
     }
 };
 
