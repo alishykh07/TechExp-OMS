@@ -102,8 +102,15 @@ const loginController = async (req, res) => {
         const token = await user.generateAuthToken();
 
         res.status(200).send({message: "User Login sucessfully", token, user})
+
     } catch (error) {
-        res.status(500).send({message: "Error to Login User : Controller", error})
+
+        console.log("LOGIN ERROR => ", error);
+
+        res.status(500).send({
+            message: "Error to Login User : Controller",
+            error: error.message
+        })
     }
 }
 
