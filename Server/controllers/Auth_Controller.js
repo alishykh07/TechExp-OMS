@@ -35,30 +35,17 @@ const addUserController = async (req, res) => {
         let profilePhoto = null;
         let resume = null;
 
-        // if (req?.files?.profilePhoto) {
-        //     const profilePhotoLocalPath = req.files.profilePhoto[0].buffer;
-        //     profilePhoto = await uploadOnCloudinary(profilePhotoLocalPath);
-        // }
-
-        // if (req?.files?.resume) {
-        //     const resumeLocalPath = req.files.resume[0].buffer;
-        //     resume = await uploadOnCloudinary(resumeLocalPath);
-        // } else {
-        //     return res.status(400).json({message: "Resume file is required"});
-        // }
-
-
         if (req.files?.profilePhoto?.[0]) {
-    const file = req.files.profilePhoto[0];
-    profilePhoto = await uploadOnCloudinary(file.buffer);
-}
+            const file = req.files.profilePhoto[0];
+            profilePhoto = await uploadOnCloudinary(file.buffer);
+        }
 
 
 if (!req.files?.resume?.[0]) {
     return res.status(400).json({ message: "Resume required" });
 }
 
-const resume = await uploadOnCloudinary(req.files.resume[0].buffer);
+resume = await uploadOnCloudinary(req.files.resume[0].buffer);
 
         const newUser = await UserModel.create({
             fullName,
