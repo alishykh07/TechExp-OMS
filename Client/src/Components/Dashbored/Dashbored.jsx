@@ -124,7 +124,7 @@ function AdminDashboard() {
           gradient="from-blue-300 to-[#202251]"
         />
       </div>
-
+    <div className="max-w-6xl mx-auto mb-6 sm:mb-8">
       <div className="mmax-w-6xl mx-auto bg-white p-4 sm:p-6 rounded-xl shadow-lg mb-6 sm:mb-8">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#202251] mb-4">
           Recent Activity
@@ -151,6 +151,7 @@ function AdminDashboard() {
             No Recent Activity
           </div>
         )}
+      </div>
       </div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
