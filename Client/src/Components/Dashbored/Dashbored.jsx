@@ -184,7 +184,7 @@ function DashboardCard({ title, value, icon, gradient }) {
       className={`bg-gradient-to-br ${gradient} p-4 sm:p-6 rounded-xl shadow-md flex items-center justify-between transition-transform duration-300 hover:scale-105 hover:shadow-lg`}
     >
       <div>
-        <h3 className="text-sm sm:text-base font-semibold text-gray-800 mb-1">
+        <h3 className="text-sm sm:text-base font-semibold text-gray-200 mb-1">
           {title}
         </h3>
         <p className="text-2xl sm:text-3xl font-bold text-[#202251]">{value}</p>
