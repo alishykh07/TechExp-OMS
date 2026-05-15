@@ -38,15 +38,15 @@ function ShowAllGroups() {
           filteredGroups = filteredGroups.filter(
             (group) => group.groupType === "public",
           );
+          setGroups(filteredGroups); // ✅ yeh line missing thi
         } else {
           filteredGroups = filteredGroups.filter(
             (group) =>
               group.groupType === "public" ||
               group.members.includes(loggedIn.username),
           );
+          setGroups(filteredGroups);
         }
-        // await new Promise(resolve => setTimeout(resolve, 1000));
-        setGroups(filteredGroups);
       } catch (e) {
         console.log(e);
         toast.error(e.message);
@@ -55,7 +55,7 @@ function ShowAllGroups() {
       }
     };
 
-    if (loggedIn !== null) fetchGroups();
+    fetchGroups(); // ✅ condition hata do — hamesha fetch karo
   }, [loggedIn]);
 
   if (isLoading) {
