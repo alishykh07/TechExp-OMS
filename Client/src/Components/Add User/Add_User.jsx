@@ -23,6 +23,7 @@ function Add_User() {
     { value: "Video Editor", label: "Video Editor" },
     { value: "Animator", label: "Animator" },
     { value: "UI/UX Designer", label: "UI/UX Designer" },
+    { value: "Automation", label: "Automation" },
     { value: "Sales", label: "Sales" },
     { value: "Marketing", label: "Marketing" },
     { value: "Customer Support", label: "Customer Support" },
