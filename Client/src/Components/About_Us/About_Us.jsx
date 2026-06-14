@@ -32,7 +32,7 @@ function AboutUs() {
           </p>
 
           <p className="text-base md:text-lg leading-relaxed">
-            At EechExp, we focus on delivering high-quality solutions with
+            At TechExp, we focus on delivering high-quality solutions with
             efficiency, transparency, and collaboration at the core. This portal
             ensures smooth communication between team members and better control
             over internal processes.
