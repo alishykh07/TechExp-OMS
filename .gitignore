@@ -3,3 +3,5 @@ Client/.env
 
 Server/node_modules
 Client/node_modules
+config.bat
+node_modules

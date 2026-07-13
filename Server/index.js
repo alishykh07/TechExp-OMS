@@ -14,7 +14,6 @@ const AttendanceRouters = require('./routers/Attendance_Route');
 const PhotoRoutes = require("./routers/Photo_Route");
 
 require("dotenv").config();
-const path = require("path");
 
 const app = express();
 app.use(cors({
@@ -36,7 +35,6 @@ mongoose.connect(process.env.MONGO_URL, {
 
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: false }));
-app.use('/uploads', express.static(path.join(__dirname, "uploads")));
 
 mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log("DB connected"))

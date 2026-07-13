@@ -6,7 +6,7 @@ const addBlogNewsController = async (req, res) => {
         const { title, description } = req.body;
 
         const imageLocalPath = req?.file?.buffer;
-        const image = await uploadOnCloudinary(imageLocalPath);
+        const image = await uploadOnCloudinary(imageLocalPath, 'Office-Management-System/blog-news');
 
         await BlogNewsModel.create({ title, description, image: image.url})
             .then(() => res.status(200).json({ message: 'Blog News Successfully created!' }))

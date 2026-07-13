@@ -7,7 +7,7 @@ const addReportController = async (req, res) => {
         const {title, description, startDate, endDate, submitedBy} = req.body;
 
         const reportDocumentLocalPath = req?.file?.buffer;
-        const reportDocument = await uploadOnCloudinary(reportDocumentLocalPath);
+        const reportDocument = await uploadOnCloudinary(reportDocumentLocalPath, 'Office-Management-System/reports');
 
         const user = await UserModel.findOne({ username: submitedBy });
 

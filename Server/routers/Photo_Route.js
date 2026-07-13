@@ -1,28 +1,20 @@
 const express = require("express");
 const router = express.Router();
-const multer = require("multer");
-const path = require("path");
+const { default: upload } = require("../middlewares/uploadMiddleware");
+const { uploadOnCloudinary } = require("../cloudinary/Cloudinary");
 
 const Photo = require("../models/Photo_Model");
-
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/");
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  }
-});
-
-const upload = multer({ storage });
 
 router.post("/upload-image", upload.single("image"), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ msg: "No file" });
 
-    const imageUrl = `http://localhost:3001/uploads/${req.file.filename}`;
+    const image = await uploadOnCloudinary(
+      req.file.buffer,
+      "Office-Management-System/office-gallery"
+    );
 
-    const newPhoto = await Photo.create({ imageUrl });
+    const newPhoto = await Photo.create({ imageUrl: image.url });
 
     res.json(newPhoto);
   } catch (err) {

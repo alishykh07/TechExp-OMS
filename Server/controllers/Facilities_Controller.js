@@ -6,7 +6,7 @@ const addFacilitiesController = async (req, res) => {
         const {title, description} = req.body;
 
         const imageLocalPath = req?.file?.buffer;
-        const image = await uploadOnCloudinary(imageLocalPath);
+        const image = await uploadOnCloudinary(imageLocalPath, 'Office-Management-System/facilities');
 
         await FacilitiesModel.create({ title, description, image: image.url })
             .then(() => res.status(200).send({ message: "Facilities Added successfully" }))

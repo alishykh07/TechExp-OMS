@@ -78,14 +78,14 @@ export const updateUserProfile = async (id, form) => {
     }
 }
 
-export const allStaff = async () => {
-    try {
-        const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/all-staff`)
-        return response.data;
-    } catch (err) {
-        error(err)
+    export const allStaff = async () => {
+        try {
+            const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/all-staff`)
+            return response.data;
+        } catch (err) {
+            error(err)
+        }
     }
-}
 
 export const deleteStaff = async (id) => {
     try {

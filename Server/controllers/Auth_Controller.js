@@ -4,6 +4,10 @@ const {uploadOnCloudinary} = require("../cloudinary/Cloudinary");
 const {sendMail} = require("../sendingEmail/SendEmail");
 const {registerEmailHtml} = require("../sendingEmail/RagisterEmailHtml")
 
+const profilePhotoFolder = (role) =>
+    `Office-Management-System/${role === 'Manager' ? 'manager' : 'employees'}`;
+const employeeCvsFolder = 'Office-Management-System/employee-cvs';
+
 const addUserController = async (req, res) => {
     try {
         const {
@@ -37,14 +41,14 @@ const addUserController = async (req, res) => {
 
         if (req.files?.profilePhoto?.[0]) {
             const file = req.files.profilePhoto[0];
-            profilePhoto = await uploadOnCloudinary(file.buffer);
+            profilePhoto = await uploadOnCloudinary(file.buffer, profilePhotoFolder(role));
         }
 
         if (!req.files?.resume?.[0]) {
             return res.status(400).json({ message: "Resume required" });
         }
 
-        resume = await uploadOnCloudinary(req.files.resume[0].buffer); // ✅ const hata diya
+        resume = await uploadOnCloudinary(req.files.resume[0].buffer, employeeCvsFolder); // ✅ const hata diya
 
         const newUser = await UserModel.create({
             fullName,
@@ -153,15 +157,21 @@ const updateProfile = async (req, res) => {
 
     let profilePhoto = null;
     let resume = null;
+    let profileRole = form.role;
+
+    if (req?.files?.profilePhoto && !profileRole) {
+        const existingUser = await UserModel.findById(id).select('role');
+        profileRole = existingUser?.role;
+    }
 
     if (req?.files?.profilePhoto) {
         const profilePhotoLocalPath = req.files.profilePhoto[0].buffer;
-        profilePhoto = await uploadOnCloudinary(profilePhotoLocalPath);
+        profilePhoto = await uploadOnCloudinary(profilePhotoLocalPath, profilePhotoFolder(profileRole));
     }
 
     if (req?.files?.resume) {
         const resumeLocalPath = req.files.resume[0].buffer;
-        resume = await uploadOnCloudinary(resumeLocalPath);
+        resume = await uploadOnCloudinary(resumeLocalPath, employeeCvsFolder);
     }
 
     let updateData = {...form};
